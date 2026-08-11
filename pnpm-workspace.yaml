@@ -1,0 +1,21 @@
+packages:
+  - .
+
+allowBuilds:
+  core-js-bundle: false
+  rs-module-lexer: false
+  unrs-resolver: false
+
+blockExoticSubdeps: true
+
+minimumReleaseAge: 10080 # 7 days in minutes
+
+minimumReleaseAgeExclude:
+  - pnpm@11.21.0
+
+overrides:
+  chokidar: '>=5'
+  semver: '>=7'
+  ua-parser-js: '>=2'
+
+trustPolicy: no-downgrade

@@ -1,0 +1,35 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    allow:
+      - dependency-type: all
+    cooldown:
+      default-days: 7
+    rebase-strategy: auto
+    assignees:
+      - poad
+    groups:
+      actions:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directories:
+      - '/'
+    schedule:
+      interval: daily
+      timezone: Asia/Tokyo
+    allow:
+      - dependency-type: all
+    rebase-strategy: auto
+    cooldown:
+      default-days: 7
+    assignees:
+      - poad
+    groups:
+      npm:
+        patterns:
+          - '*'
