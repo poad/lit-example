@@ -13,6 +13,7 @@
     "lint": "pnpm lint:lit-analyzer && pnpm lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
     "lint:lit-analyzer": "lit-analyzer",
+    "lint-fix": "pnpm lint --fix",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
     "serve": "wds --watch",
@@ -56,7 +57,7 @@
     "mocha": "^11.8.0",
     "prismjs": "^1.30.0",
     "rimraf": "^6.1.3",
-    "rolldown": "^1.2.2",
+    "rolldown": "^1.2.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.66.0"
   },
