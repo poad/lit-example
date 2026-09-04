@@ -5,10 +5,12 @@ allowBuilds:
 
 blockExoticSubdeps: true
 
+engineStrict: true
+
 minimumReleaseAge: 10080 # 7 days in minutes
 
 minimumReleaseAgeExclude:
-  - pnpm@12.3.3
+  - pnpm@12.3.4
   - diff@8.0.3
   - serialize-javascript@7.0.3 || 7.0.5
   - nanoid@3.3.18

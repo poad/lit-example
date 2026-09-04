@@ -57,7 +57,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "^12.3.1",
+      "version": "^12.3.4",
       "onFail": "download"
     },
     "runtime": {
@@ -65,6 +65,12 @@
       "version": "^24.20.0",
       "onFail": "download"
     }
+  },
+  "engines": {
+    "node": ">=24",
+    "npm": "echo Please use pnpm!",
+    "pnpm": ">=11",
+    "yarn": "echo Please use pnpm!"
   },
   "customElements": "custom-elements.json"
 }
