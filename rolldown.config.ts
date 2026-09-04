@@ -12,8 +12,11 @@ export default {
     }
   },
   plugins: [
-    replacePlugin({},{
-      preventAssignment: false,
-    }),
+    replacePlugin(
+      {},
+      {
+        preventAssignment: false,
+      },
+    ),
   ],
 };

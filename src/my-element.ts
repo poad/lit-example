@@ -1,5 +1,5 @@
-import {LitElement, html, css} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
+import { LitElement, html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
 /**
  * An example element.
@@ -28,15 +28,13 @@ export class MyElement extends LitElement {
   /**
    * The number of times the button has been clicked.
    */
-  @property({type: Number})
+  @property({ type: Number })
   count = 0;
 
   override render() {
     return html`
       <h1>${this.sayHello(this.name)}!</h1>
-      <button @click=${this._onClick} part="button">
-        Click Count: ${this.count}
-      </button>
+      <button @click=${this._onClick} part="button">Click Count: ${this.count}</button>
       <slot></slot>
     `;
   }

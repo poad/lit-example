@@ -1,5 +1,5 @@
-import {legacyPlugin} from '@web/dev-server-legacy';
-import {playwrightLauncher} from '@web/test-runner-playwright';
+import { legacyPlugin } from '@web/dev-server-legacy';
+import { playwrightLauncher } from '@web/test-runner-playwright';
 
 const mode = process.env.MODE || 'dev';
 if (!['dev', 'prod'].includes(mode)) {
@@ -47,9 +47,9 @@ if (!['dev', 'prod'].includes(mode)) {
 const browsers = {
   // Local browser testing via playwright
   // ===========
-  chromium: playwrightLauncher({product: 'chromium'}),
-  firefox: playwrightLauncher({product: 'firefox'}),
-  webkit: playwrightLauncher({product: 'webkit'}),
+  chromium: playwrightLauncher({ product: 'chromium' }),
+  firefox: playwrightLauncher({ product: 'firefox' }),
+  webkit: playwrightLauncher({ product: 'webkit' }),
 
   // Uncomment example launchers for running on Sauce Labs
   // ===========
@@ -71,9 +71,7 @@ const noBrowser = (b) => {
 };
 let commandLineBrowsers;
 try {
-  commandLineBrowsers = process.env.BROWSERS?.split(',').map(
-    (b) => browsers[b] ?? noBrowser(b)
-  );
+  commandLineBrowsers = process.env.BROWSERS?.split(',').map((b) => browsers[b] ?? noBrowser(b));
 } catch (e) {
   console.warn(e);
 }
@@ -82,7 +80,7 @@ try {
 export default {
   rootDir: '.',
   files: ['./test/**/*_test.js'],
-  nodeResolve: {exportConditions: mode === 'dev' ? ['development'] : []},
+  nodeResolve: { exportConditions: mode === 'dev' ? ['development'] : [] },
   preserveSymlinks: true,
   browsers: commandLineBrowsers ?? Object.values(browsers),
   testFramework: {

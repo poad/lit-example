@@ -6,7 +6,7 @@ on:
       - main
   push:
     branches:
-    - main
+      - main
 
   workflow_dispatch:
 
@@ -17,17 +17,17 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-    - name: Install pnpm
-      uses: pnpm/setup@84cb39b217b10273981911c288cd62326dc7c6d2 # v2.0.2
+      - name: Install pnpm
+        uses: pnpm/setup@84cb39b217b10273981911c288cd62326dc7c6d2 # v2.0.2
 
-    - name: lint
-      env:
-        CI: true
-      run: pnpm lint
+      - name: lint
+        env:
+          CI: true
+        run: pnpm lint
 
-    - name: build
-      env:
-        CI: true
-      run: pnpm build
+      - name: build
+        env:
+          CI: true
+        run: pnpm build
