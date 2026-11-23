@@ -44,7 +44,7 @@
     "@web/dev-server": "^1.0.1",
     "@web/dev-server-legacy": "^3.0.1",
     "@web/test-runner": "^1.0.1",
-    "@web/test-runner-playwright": "^1.0.1",
+    "@web/test-runner-playwright": "^1.0.2",
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "lit-analyzer": "^2.0.3",
     "mocha": "^12.0.3",
@@ -58,7 +58,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.21.0",
+      "version": "12.23.0",
       "onFail": "download"
     },
     "runtime": {
